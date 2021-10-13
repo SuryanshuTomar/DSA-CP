@@ -8,8 +8,73 @@ public class Patterns {
 //        pattern2(noOfLines);
 //        pattern3(noOfLines);
 //        pattern4(noOfLines);
-        pattern5(noOfLines);
+//        pattern5(noOfLines);
+//        pattern6(noOfLines);
+//        pattern7(noOfLines);
+//        pattern8(noOfLines);
+//        pattern9(noOfLines);
+        pattern10(noOfLines);
 
+    }
+
+    private static void pattern10(int noOfLines) {
+        for (int row = 1; row <= noOfLines ; row++) {
+            for (int space = 0; space < noOfLines - row; space++) {
+                System.out.print(" ");
+            }
+            for (int column = 0; column < row; column++) {
+                System.out.print("*" + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    private static void pattern9(int noOfLines) {
+        for (int row = 1; row <= noOfLines ; row++) {
+            for (int space = 1; space <= row - 1; space++) {
+                System.out.print(" ");
+            }
+            for (int column = 1; column <= 2 * (noOfLines - row + 1) - 1; column++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    private static void pattern8(int noOfLines) {
+        for (int row = 1; row <= noOfLines ; row++) {
+            for (int space = 1; space <= noOfLines - row; space++) {
+                System.out.print(" ");
+            }
+            for (int column = 1; column <= 2 * row - 1; column++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    private static void pattern7(int noOfLines) {
+        for (int row = 1; row <= noOfLines ; row++) {
+            for (int space = 1; space <= row - 1; space++) {
+                System.out.print(" ");
+            }
+            for (int column = 1; column <= noOfLines - row + 1; column++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    private static void pattern6(int noOfLines) {
+        for (int row = 1; row <= noOfLines ; row++) {
+            for (int space = 1; space <= noOfLines - row; space++) {
+                System.out.print(" ");
+            }
+            for (int column = 1; column <= row; column++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
     }
 
     private static void pattern5(int noOfLines) {
