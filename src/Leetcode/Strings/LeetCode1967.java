@@ -3,7 +3,7 @@ package Leetcode.Strings;
 public class LeetCode1967 {
     public static void main(String[] args) {
         String[] inputPattern = {"a","abc","bc","d"};
-        String inputWord = "abc";
+        String inputWord = "abcd";
         int result = numOfStrings(inputPattern, inputWord);
         System.out.println(result);
     }
