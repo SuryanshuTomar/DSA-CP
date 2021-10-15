@@ -11,7 +11,7 @@ public class LeetCode680 {
         return isPalindrome(inStr, 0, inStr.length() - 1, false);
     }
 
-    private static boolean isPalindrome(final String s, int leftIndex, int rightIndex, boolean isCharacterDeleted){
+    private static boolean isPalindrome(String s, int leftIndex, int rightIndex, boolean isCharacterDeleted){
         while(leftIndex <= rightIndex){
             if(s.charAt(leftIndex) != s.charAt(rightIndex)){
                 if(isCharacterDeleted){
