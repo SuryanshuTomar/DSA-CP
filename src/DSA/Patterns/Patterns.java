@@ -13,8 +13,89 @@ public class Patterns {
 //        pattern7(noOfLines);
 //        pattern8(noOfLines);
 //        pattern9(noOfLines);
-        pattern10(noOfLines);
+//        pattern10(noOfLines);
+//        pattern11(noOfLines);
+//        pattern12(noOfLines);
+//        pattern13(noOfLines);
+//        pattern14(noOfLines);
+        pattern15(noOfLines);
 
+    }
+
+    private static void pattern15(int noOfLines) {
+        for (int row = 1; row <= 2 * noOfLines ; row++) {
+            int noOfStarInCol = row > noOfLines ?  2*(2 * noOfLines - row) - 1: 2 * row -1;
+            int spaceInCol = row > noOfLines ? row - noOfLines: noOfLines - row;
+            for (int space = 0; space < spaceInCol; space++) {
+                System.out.print(" ");
+            }
+            for (int column = 1; column <= noOfStarInCol; column++) {
+                if (column == 1 || column == noOfStarInCol){
+                    System.out.print("*");
+                }
+                else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    private static void pattern14(int noOfLines) {
+        for (int row = 1; row <= noOfLines ; row++) {
+            for (int column = 1; column <= 2 * noOfLines - row; column++) {
+                if (column == row || row == 1 || column == 2 * noOfLines - row){
+                    System.out.print("*");
+                }
+                else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    private static void pattern13(int noOfLines) {
+        for (int row = 1; row <= noOfLines ; row++) {
+            for (int space = 0; space < noOfLines - row; space++) {
+                System.out.print(" ");
+            }
+            for (int column = 1; column <= 2 * row -1; column++) {
+                if (column == 1 || row == noOfLines || column == 2 * row -1){
+                    System.out.print("*");
+                }
+                else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    private static void pattern12(int noOfLines) {
+        for (int row = 1; row <= 2 * noOfLines ; row++) {
+            int colInRow = row > noOfLines ? row - noOfLines : noOfLines - row + 1;
+            int spaceinCol = row > noOfLines ? 2 * noOfLines - row : row - 1;
+            for (int space = 0; space < spaceinCol; space++) {
+                System.out.print(" ");
+            }
+            for (int column = 0; column < colInRow; column++) {
+                System.out.print("*" + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    private static void pattern11(int noOfLines) {
+        for (int row = 1; row <= noOfLines ; row++) {
+            for (int space = 0; space < row; space++) {
+                System.out.print(" ");
+            }
+            for (int column = 1; column <= noOfLines - row + 1; column++) {
+                System.out.print("*" + " ");
+            }
+            System.out.println();
+        }
     }
 
     private static void pattern10(int noOfLines) {
@@ -22,7 +103,7 @@ public class Patterns {
             for (int space = 0; space < noOfLines - row; space++) {
                 System.out.print(" ");
             }
-            for (int column = 0; column < row; column++) {
+            for (int column = 1; column <= row; column++) {
                 System.out.print("*" + " ");
             }
             System.out.println();
