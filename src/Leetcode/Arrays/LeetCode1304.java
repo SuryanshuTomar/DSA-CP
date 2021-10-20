@@ -1,5 +1,4 @@
 package Leetcode.Arrays;
-
 import java.util.Arrays;
 
 public class LeetCode1304 {
