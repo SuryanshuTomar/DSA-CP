@@ -1,14 +1,14 @@
 #include <iostream>
 
 int main(){
-   int starNum {};
+   int rowNum {};
 
    std::cout << "Enter the Number of Rows you want for Star pattern : ";
-   std::cin >> starNum;
+   std::cin >> rowNum;
 
    // For Loop Approach
-   for(int row = 0; row < starNum; row++){
-      for(int col = 0; col < starNum; col++){
+   for(int row = 0; row < rowNum; row++){
+      for(int col = 0; col < rowNum; col++){
          std::cout << "* " ;
       }
       std::cout << std::endl;
@@ -16,9 +16,9 @@ int main(){
 
    // While Loop Approach
    int row {0};
-   while(row < starNum){
+   while(row < rowNum){
    int col {0};
-      while(col < starNum){
+      while(col < rowNum){
          std::cout << "* ";
          col++;
       }
