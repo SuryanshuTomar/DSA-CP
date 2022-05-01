@@ -42,19 +42,30 @@ int main(){
    // std::cout << str7 << std::endl;
 
    // 7. Taking string input for multiple Test Cases 
-   int t;
-   std::cin >> t;
-   std::cin.ignore();
-   while(t--){
-      std::string str8;
-      getline(std::cin , str8);
-      std::cout << str8 << std::endl;
-   } 
-
+   // int t;
+   // std::cin >> t;
+   // std::cin.ignore();
+   // while(t--){
+   //    std::string str8;
+   //    getline(std::cin , str8);
+   //    std::cout << str8 << std::endl;
+   // } 
+   // input : 
    // 3
    // abc def
    // ghi jkl
    // mno pqr
+
+   // 8. Taking input of very large number in string form and then extracting a digit from the string input as an integer form
+   std::string s;
+   getline(std::cin, s);
+   int last_digit = s[s.size() - 1] - '0';
+   std::cout << "Integer Digit : " << last_digit << std::endl;
+
+   // input 
+   // 38147091430817390587019284537019324087239846176324891509304932094871039567413298
+   // O/p -> "Integer Digit" : 8
+
 
    return 0;
 } 
