@@ -1,3 +1,5 @@
+// https://www.hackerrank.com/challenges/c-tutorial-strings/problem
+
 #include <iostream>
 using namespace std;
 
