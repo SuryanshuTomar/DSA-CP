@@ -3,7 +3,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-const int N = 40;
+const int N = 41;
 int main(){
    int test;
    cin >> test;
