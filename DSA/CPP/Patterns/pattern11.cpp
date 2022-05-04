@@ -21,14 +21,13 @@ int main(){
    for(int row = 1; row <= 2 * rowNums; row++){
       int calSpace = row <= rowNums ? rowNums - row : row - rowNums;
       int calCol = row <= rowNums ? row : 2 * rowNums - row;
-      int calCol2 = row <= rowNums ? row: 2 * rowNums - row;
       for(int space = calSpace; space >= 0; space--){
          cout << " ";
       }
       for(int col = calCol; col >= 1; col--){
          cout << col;
       }
-      for(int col = 2; col <= calCol2; col++){
+      for(int col = 2; col <= calCol; col++){
          cout << col;
       }
       cout << endl;
@@ -39,7 +38,6 @@ int main(){
    while(row <= 2 * rowNums){
       int calSpace = row <= rowNums ? rowNums - row : row - rowNums;
       int calCol = row <= rowNums ? row : 2 * rowNums - row;
-      int calCol2 = row <= rowNums ? row: 2 * rowNums - row;
       
       int space {calSpace};
       while(space >= 0){
@@ -54,7 +52,7 @@ int main(){
       }
 
       col =  {2};
-      while(col <= calCol2){
+      while(col <= calCol){
          cout << col;
          col++;
       }
