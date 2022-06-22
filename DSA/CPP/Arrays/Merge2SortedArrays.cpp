@@ -10,6 +10,7 @@ void printVector(vector<int> &vec){
    cout << endl;
 }
 
+
 vector<int> mergeVectors(vector<int> vec1, vector<int> vec2){
    vector<int> mergedVector;
    int size {};
