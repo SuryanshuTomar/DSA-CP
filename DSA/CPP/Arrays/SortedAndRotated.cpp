@@ -5,14 +5,6 @@
 
 using namespace std;
 
-void printVector(vector<int> &vec){
-   cout << "Vector : ";
-   for(auto i: vec){
-      cout << i << " ";
-   }
-   cout << endl;
-}
-
 bool isSortedAndRotated(vector<int> &vec){
    int count = 0;
 
