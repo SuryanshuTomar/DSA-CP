@@ -19,11 +19,17 @@ return str;
 
 int main(){
    char name[20];
+
+   string anotherName;
    
-   cout << "Enter your name : ";
    // Taking input in charachter array with spaces 
-   cin >> name;
+   cout << "Enter your name : ";
+   cin.getline(name, sizeof(name));
+   cout << "Enter your another name : ";
+   getline(cin, anotherName);
+
    cout << "Your name is : " << name << endl;
+   cout << "Your Another name is : " << anotherName << endl;
 
    int length = getCharArrayLength(name);
    cout << "Length of the char array is : " << length << endl; 
