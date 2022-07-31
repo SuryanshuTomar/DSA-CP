@@ -20,5 +20,9 @@ function findTargetPairSum(arr, targetSum) {
 	return resultantPair;
 }
 
-const result = findTargetPairSum(arr, targetSum);
-console.log(result);
+
+console.log(findTargetPairSum(arr, targetSum));
+console.log(findTargetPairSum([1, 6, 8, 9, 10], 14));
+console.log(findTargetPairSum([1, 3, 4, 6, 8, 10], 12));
+console.log(findTargetPairSum([1, 2, 3, 4, 15], 10));
+
