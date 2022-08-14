@@ -18,3 +18,6 @@ int main()
     
     cout << findFibonacci(n);
 }
+
+// SC - O(n)
+// TC - O(2^n)

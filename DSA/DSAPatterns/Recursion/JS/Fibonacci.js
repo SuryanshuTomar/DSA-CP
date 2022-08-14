@@ -13,3 +13,6 @@ function main() {
 }
 
 main();
+
+// SC - O(n)
+// TC - O(2^n)
