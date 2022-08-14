@@ -17,3 +17,6 @@ function main() {
 }
 
 main();
+
+// SC - O(n)
+// TC - O(n)

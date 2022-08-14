@@ -23,3 +23,6 @@ int main() {
 
     return 0;
 }
+
+// SC - O(n)
+// TC - O(n)
