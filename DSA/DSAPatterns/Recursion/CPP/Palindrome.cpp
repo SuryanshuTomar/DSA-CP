@@ -12,6 +12,7 @@ bool isPalindrome(string &s){
    return false;
 }
 
+// More Efficient
 bool isPalindrome2(string &s, int l, int r){
    if(l >= r) return true;
    if(s[l] != s[r]) return false;
@@ -24,3 +25,6 @@ int main(){
    cout << isPalindrome2(str, 0, str.size() - 1);
    return 0;
 }
+
+// SC  - O(n)
+// TC  - O(n)
