@@ -1,0 +1,6 @@
+=> 4 Steps to solve any recursion problem -
+
+1. Identify whether you can break down the problem into the smaller similar problem.
+2. Do the Small Work.
+3. Ask the Recursion Call to do the remaining work.
+4. Write the Base Condition.
