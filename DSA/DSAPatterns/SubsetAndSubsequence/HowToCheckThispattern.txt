@@ -1,1 +1,2 @@
 => Whenever we have to create subsets or permutations/combinations where we have to either add or remove some element then this is known as Subset Pattern.
+=> So the technique to solve these iterations is - In every recursion call or iteration, we can create a subset element by either taking it or ignoring it in every recursion call or iteration in the processes and unprocessed variable. And Whenever out unprocessed variable is null or empty then the processed variable in that recursion call or iteration is one our subset element answers.
