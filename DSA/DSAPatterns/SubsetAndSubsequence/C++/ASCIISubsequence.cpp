@@ -1,3 +1,5 @@
+// https://www.geeksforgeeks.org/subsequences-generated-by-including-characters-or-ascii-value-of-characters-of-given-string/
+
 #include <iostream>
 #include <vector>
 using namespace std;
