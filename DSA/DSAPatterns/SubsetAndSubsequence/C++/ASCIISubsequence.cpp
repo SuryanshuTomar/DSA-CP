@@ -17,7 +17,7 @@ vector<string> findASCIISubsequence(vector<string>& result, string processed, st
 
 
 int main(){
-   string unprocessed = "ab";
+   string unprocessed = "abc";
    string processed = "";
    vector<string> result;
    findASCIISubsequence(result, processed, unprocessed, 0);
