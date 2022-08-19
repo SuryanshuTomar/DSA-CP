@@ -16,6 +16,11 @@ void findSubsets(vector<int> processed, vector<int> unprocessed, vector<vector<i
    findSubsets(processed, unprocessed, result, index + 1);
 }
 
+
+// Time Complexity -> iteration for each level(no of level) * no of subsets on each level
+// So, TC -> n * 2^n (as number of subsets keeps getting doubled on each level).
+// Space Complexity -> no. of subsets on each level * space taken by each findSubsets
+// So, SC -> 2^n * n
 void findSubsetsIterative(vector<int>& nums, vector<vector<int>>& result){
    for(auto num : nums){
        // making a copy of given 2-d vector.
