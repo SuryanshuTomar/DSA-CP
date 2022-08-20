@@ -1,0 +1,8 @@
+=> Permutation Pattern -
+- A permutation is a collection or a combination of objects from a set where the order or the arrangement of the chosen objects does matter. In other words, a permutation is an arrangement of objects in a definite order. So before deep dive into permutation let’s have a brief discussion on factorial first.
+- To find number of permuations = n!
+
+Eg -
+str = "abc";
+permutations = ["abc", "acb", "bac", "bca", "cab", "cba"];
+no of permutataions => 3! = 6;
