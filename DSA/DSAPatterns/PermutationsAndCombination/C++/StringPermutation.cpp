@@ -46,6 +46,7 @@ int main(){
    vector<string> result;
    // findStringPermutations("" ,str, result);
    int count = findStringPermutationsWithCount("" ,str, result);
+   sort(result.begin(), result.end());
    cout << "Permutation Count : " << count << endl;
    printVector(result);
    return 0;
