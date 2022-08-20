@@ -50,11 +50,8 @@ vector<vector<int>> subsets(vector<int>& nums) {
    return result;
 }
 
-
-int main(){
-   vector<int> vec = {1,2,3};
-   vector<vector<int>> result = subsets(vec);
-         cout << "{ ";
+void printNestedVector(vector<vector<int>>& result){
+   cout << "{ ";
    for(auto i: result){
          cout << "{ ";
       for(auto j: i){
@@ -62,6 +59,12 @@ int main(){
       }
          cout << " }";
    }
-         cout << " }" << endl;
+   cout << " }" << endl;
+}
+
+int main(){
+   vector<int> vec = {1,2,3};
+   vector<vector<int>> result = subsets(vec);
+   printNestedVector(result);
    return 0;
 }
