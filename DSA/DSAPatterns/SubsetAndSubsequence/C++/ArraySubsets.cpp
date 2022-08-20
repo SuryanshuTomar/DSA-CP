@@ -33,7 +33,7 @@ void findSubsetsIterative(vector<int>& nums, vector<vector<int>>& result){
       }
       for(int i = 0; i < subsetTemp.size(); i++){
          // now adding modified subsetTemp to original subset -> 
-         //(subsetTemp->{{},{1}} + subsetTemp->{{2}, {1, 2}} => {{},{1},{2},{1,2}}) 
+         //(original->{{},{1}} + subsetTemp->{{2}, {1, 2}} => {{},{1},{2},{1,2}}) 
          result.push_back(subsetTemp[i]);
       }
    }  
