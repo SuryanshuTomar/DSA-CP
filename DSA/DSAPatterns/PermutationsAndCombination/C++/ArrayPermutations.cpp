@@ -2,6 +2,7 @@
 using namespace std;
 
 // Approach 1 : Using a new vector
+// TC - No of permutation * time to create per permutations => O(n * n!)
 void findPermutations1(int index, vector<int> processed, vector<int>& unprocessed, vector<vector<int>>& result){
    if(index == unprocessed.size()){
       result.push_back(processed);
@@ -16,20 +17,22 @@ void findPermutations1(int index, vector<int> processed, vector<int>& unprocesse
       findPermutations1(index + 1, newP, unprocessed, result);
    }
 }
-// Approach 2 : By Swapping elements (Better Approach)
+// Approach 2 : By Swapping elements (Better Approach) 
+// TC - No of permutation * time to create per permutations => O(n * n!)
 void findPermutations2(int index, vector<int> processed, vector<vector<int>>& result){
    if(index == processed.size()){
       result.push_back(processed);
       return;
    }
 
-for(int i = index; i < processed.size(); i++){
-
-   swap(processed[index], processed[i]);
-   findPermutations2(index + 1, processed, result);
-   // Backtracking for next iteration call
-   swap(processed[index], processed[i]);
-}
+   for(int i = index; i < processed.size(); i++){
+      // "index" is the position on which we are swapping elements for to create permutations
+      
+      swap(processed[index], processed[i]);
+      findPermutations2(index + 1, processed, result);
+      // Backtracking for next iteration call
+      swap(processed[index], processed[i]);
+   }
 }
    
 vector<vector<int>> permute(vector<int>& nums) {
