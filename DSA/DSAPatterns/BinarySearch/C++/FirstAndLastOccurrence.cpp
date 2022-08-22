@@ -46,6 +46,7 @@ int findLastOccurrence(vector<int> arr, int target){
    return targetCurrentIndex;
 }
 
+// TC - O(logn)
 int main() {
     // Write C++ code here
     vector<int> arr = {1, 2, 3, 10, 10, 10, 10, 12, 12, 14};
