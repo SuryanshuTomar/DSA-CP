@@ -10,9 +10,9 @@ int findCeiling(vector<int>& arr, int target){
    int start = 0;
    int end = arr.size() - 1;
    int result = -1;
-   int mid;
+   
    while(start <= end){
-      mid = start + (end - start) / 2;
+      int mid = start + (end - start) / 2;
       if(arr[mid] == target){
          return mid;
       }
@@ -32,9 +32,9 @@ int findFloor(vector<int>& arr, int target){
    int start = 0;
    int end = arr.size() - 1;
    int result = -1;
-   int mid;
+   
    while(start <= end){
-      mid = start + (end - start) / 2;
+      int mid = start + (end - start) / 2;
       if(arr[mid] == target){
          return mid;
       }
