@@ -24,7 +24,8 @@ int findCeiling(vector<int>& arr, int target){
       }
    }
    
-   return mid + 1;
+   // Returning start because while loop will break when start > end and so the start will now point to mid + 1 which will be the smallest number that is bigger than the target.
+   return start;
 }
 
 int findFloor(vector<int>& arr, int target){
@@ -44,13 +45,13 @@ int findFloor(vector<int>& arr, int target){
          end = mid - 1;
       }
    }
-   
-   return mid - 1;
+   // Returning end because while loop will break when start > end and so the end will now point to mid - 1 which will be the greatest number that is less than the target.
+   return end;
 }
 
 int main(){
    vector<int> arr = {2, 3, 5, 9, 14, 16, 17, 19};
-   int target = 20;
+   int target = 18;
    int ceil = findCeiling(arr, target);
    int floor = findFloor(arr, target);
    cout << "Ceil from the array : " << ceil << endl;
