@@ -15,21 +15,21 @@ int findNoOfTimesArrayIsRotated(vector<int>& arr){
       return start;
    }
 
-   int mid = start + (end - start) / 2;
    while(start <= end){
+   int mid = start + (end - start) / 2;
       // We are taking modulo here in case mid reaches end index then mid + 1 will be out of bound, This modulo will set the next to 0 index instead of out of bound.
       int next = (mid + 1) % size;
       // We are taking modulo here in case mid reaches 0 index then mid - 1 will be negative, This modulo will set the prev to end index instead of out of bound.
       int prev = (mid - 1 + size) % size;
 
-      if(arr[mid] < arr[prev] && arr[mid] < arr[next]){
+      if(arr[mid] <= arr[prev] && arr[mid] <= arr[next]){
          result = mid;
          return result;
       }
-      else if(arr[start] > arr[prev] && arr[end] > arr[prev]){  
-         mid = prev;
+      else if(arr[start] <= arr[mid]){
+         start = mid + 1;
       }else {
-         mid = next;
+         end = mid - 1;
       }
    }
    return result;
