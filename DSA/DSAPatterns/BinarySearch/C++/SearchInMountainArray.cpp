@@ -66,13 +66,15 @@ vector<int> findPeak(vector<int>& arr){
     return {start, arr[start]};
 }
 
+
+// TC -> Time Taken in FInding Peak + Time Taken to search targetin left part of array + Time Taken to search target in right part of the array.
+// Tc ->  O(logn) + O(logn) + O(logn) -> 3O(logn) -> O(logn)
 int main() {
    // vector<int> arr = {3, 5, 7, 9, 10, 90, 100, 80, 65, 40};
    vector<int> arr = {1, 5, 2};
    int target = 1;
    vector<int> result = findPeak(arr);
    int index = -1;
-   cout << result[0] << endl;
    
    // Search in the left part of the array (from 0 index till peak index)
    index = OrderAgnosticBinarySearch(arr, 0, result[0], target);
