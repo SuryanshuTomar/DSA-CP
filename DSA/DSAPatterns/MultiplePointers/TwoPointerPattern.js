@@ -14,5 +14,10 @@
 // -> Important Points to Remember -
 // 1. Physical Significance of the Pointer(what the pointer represents in the solution i.e. - pair, range, etc)
 // 2. How to initialize a pointer.
-// 3. How to move the pointer.
-// 4. When to stop the pointer.
+// 3. How to move the pointer and Reduce the problem to a search problem
+// 4. Evaluate the elements pointed by pointers
+// 5. When to stop the pointer.
+
+// Note:
+// - The Fast and Slow Poiter approach AKA the Flyod's Hare and Tortoise algorithm, is a pointer algorithm that uses two pointers which move through a continuous data set at different speeds. This approach is especially useful when dealing with a LinkedLists(mostly cyclic) or arrays.
+// - By Moving at different speeds, the algorithm proves that the two pointers are bound to meet. The fast pointer should catch the slow pointer once both the  pointers are in cyclic loop.
