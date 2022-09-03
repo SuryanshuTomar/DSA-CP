@@ -10,17 +10,18 @@ void printVector(vector<int> &result) {
 }
 
 vector<int> selectionSort(vector<int> arr) {
-  for (int i = 0; i < arr.size(); i++) {
+  int size = arr.size();
+  for (int i = 0; i < size; i++) {
     // find the max item in the remaining array and swap with its correct index
     int maxIndex = 0;
     int currMax = INT_MIN;
-    for (int j = 0; j < arr.size() - i; j++) {
+    for (int j = 0; j < size - i; j++) {
       if (arr[j] > currMax) {
         currMax = arr[j];
         maxIndex = j;
       }
     }
-    swap(arr[arr.size() - i - 1], arr[maxIndex]);
+    swap(arr[size - i - 1], arr[maxIndex]);
   }
 
   printVector(arr);
