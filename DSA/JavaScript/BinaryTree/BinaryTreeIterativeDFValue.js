@@ -1,5 +1,5 @@
 // Binary Tree Iterative Depth First Values
-
+const { Stack } = require("../StacksAndQueues/Stack");
 class Node {
 	constructor(value) {
 		this.value = value;
@@ -34,13 +34,15 @@ function makeTreeDepthFirst(root) {
 	if (root === null) return [];
 
 	const result = [];
-	const stack = [root];
+	const stack = new Stack();
+	stack.push(root);
 
-	while (stack.length > 0) {
+	while (!stack.isEmpty()) {
 		const currentNode = stack.pop();
 		result.push(currentNode.value);
 
 		if (currentNode.right) stack.push(currentNode.right);
+
 		if (currentNode.left) stack.push(currentNode.left);
 	}
 	return result;
