@@ -108,4 +108,7 @@ function main() {
 	queue.getSize();
 }
 
-main();
+// Uncomment main() to run the queue
+// main();
+
+module.exports = { Queue };

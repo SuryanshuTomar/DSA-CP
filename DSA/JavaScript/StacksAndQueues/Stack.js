@@ -1,5 +1,5 @@
 class Stack {
-	constructor(size) {
+	constructor(size = 100) {
 		this.size = size;
 		this.arr = new Array(this.size);
 		this.top = -1;
@@ -16,11 +16,9 @@ class Stack {
 	}
 
 	isEmpty() {
-		if (this.top == -1) {
-			console.log("Stack is Empty !");
+		if (this.top === -1) {
 			return true;
 		} else {
-			console.log(" Stack is not Empty !");
 			return false;
 		}
 	}
@@ -96,4 +94,7 @@ function main() {
 	return 0;
 }
 
-main();
+// Uncomment main() to run the stack
+// main();
+
+module.exports = { Stack };
