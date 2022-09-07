@@ -1,3 +1,6 @@
+// https : //
+// leetcode.com/problems/binary-tree-level-order-traversal/submissions/
+
 #include <iostream>
 #include <queue>
 using namespace std;
@@ -64,6 +67,49 @@ public:
       }
     }
   }
+
+  vector<vector<int>> levelOrder(Node *root) {
+    // return empty vector if the root is NULL.
+    if (!root)
+      return {};
+
+    vector<vector<int>> result;
+    vector<int> currentLevelElem = {};
+    queue<Node *> q;
+    q.push(root);
+    q.push(NULL);
+
+    while (!q.empty()) {
+      Node *currentNode = q.front();
+      q.pop();
+
+      // This means the current level is not traversed
+      // So, we will push the current level elements into our result vector.
+      // and now set the currentLevelElem to new vector so that we can now again
+      // store the elements of the next level in it.
+      if (currentNode == NULL) {
+        result.push_back(currentLevelElem);
+        currentLevelElem = {};
+
+        // if the queue q is not empty this means are still elements in the next
+        // level of the tree
+        if (!q.empty()) {
+          q.push(NULL);
+        }
+      }
+      // this else will run if the currenNode is not NULL.
+      else {
+        // storing the elements in the curreLevelElem vector for the current
+        // level
+        currentLevelElem.push_back(currentNode->value);
+        if (currentNode->left)
+          q.push(currentNode->left);
+        if (currentNode->right)
+          q.push(currentNode->right);
+      }
+    }
+    return result;
+  }
 };
 
 int main() {
@@ -74,5 +120,8 @@ int main() {
 
   cout << "Level Order Traversal : " << endl;
   bt->levelOrderTraversal(root);
+  //      1,
+  //    3, 5,
+  //  7, 11, 17,
   return 0;
 }
