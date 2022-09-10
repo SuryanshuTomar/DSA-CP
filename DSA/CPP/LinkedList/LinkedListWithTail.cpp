@@ -96,6 +96,8 @@ private:
   }
 
 public:
+  // TC and SC - O(n)
+  // (SC is O(n) because of recursion and its calls are stored in stack)
   void insertUsingRecursion(int index, int value) {
     if (index > 0 && isEmpty()) {
       cout << "Index does not exists";
