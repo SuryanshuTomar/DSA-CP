@@ -42,6 +42,37 @@ class LinkedListWithTail {
 		}
 	}
 
+	#insertRecurisonCall(index, value, temp) {
+		if (index == 1) {
+			const node = new Node(value);
+			node.next = temp.next;
+			temp.next = node;
+			this.size++;
+			return;
+		}
+
+		temp = temp.next;
+		this.#insertRecurisonCall(index - 1, value, temp);
+	}
+
+	insertUsingRecursion(index, value) {
+		if (index > 0 && this.isEmpty()) {
+			console.log("Index does not exist !");
+			return;
+		}
+		if (index == 0) {
+			this.prepend(value);
+			return;
+		}
+		if (index == this.size) {
+			this.append(value);
+			return;
+		}
+
+		const temp = this.head;
+		this.#insertRecurisonCall(index, value, temp);
+	}
+
 	insertAtIndex(index, value) {
 		if (index > 0 && this.isEmpty()) {
 			console.log("Index does not exists");
@@ -51,7 +82,7 @@ class LinkedListWithTail {
 			this.prepend(value);
 			return;
 		}
-		if (index == this.size - 1) {
+		if (index == this.size) {
 			this.append(value);
 			return;
 		}
@@ -144,7 +175,7 @@ class LinkedListWithTail {
 			return;
 		}
 		let temp = this.head;
-		process.stdout.write("Head -> ");
+		process.stdout.write("Head . ");
 		while (temp != null) {
 			process.stdout.write(`${temp.value}`);
 			process.stdout.write(" -> ");
@@ -163,7 +194,8 @@ function main() {
 	list.prepend(10);
 	list.prepend(20);
 	list.prepend(30);
-	list.print();
+	list.insertUsingRecursion(2, 100);
+	list.insertUsingRecursion(3, 200);
 	list.getSize();
 
 	list.append(60);
