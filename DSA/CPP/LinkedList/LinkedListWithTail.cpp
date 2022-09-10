@@ -25,10 +25,10 @@ public:
   }
 
   bool isEmpty() {
-    if (size == 0)
-      cout << "Linked List is Empty " << endl;
-    else
-      cout << "Linked List is not Empty " << endl;
+    // if (size == 0)
+    //   cout << "Linked List is Empty " << endl;
+    // else
+    //   cout << "Linked List is not Empty " << endl;
 
     return size == 0;
   }
@@ -51,9 +51,10 @@ public:
   }
 
   void append(int value) {
-    if (isEmpty())
+    if (isEmpty()) {
       prepend(value);
-    else {
+      return;
+    } else {
       Node *node = new Node(value);
       this->tail->next = node;
       this->tail = this->tail->next;
@@ -209,41 +210,41 @@ public:
   }
 };
 
-int main() {
-  LinkedListWithTail *list = new LinkedListWithTail();
-  list->isEmpty();
-  list->getSize();
+// int main() {
+//   LinkedListWithTail *list = new LinkedListWithTail();
+//   list->isEmpty();
+//   list->getSize();
 
-  list->prepend(10);
-  list->prepend(20);
-  list->prepend(30);
-  list->insertUsingRecursion(2, 100);
-  list->insertUsingRecursion(3, 200);
-  list->print();
-  list->getSize();
+//   list->prepend(10);
+//   list->prepend(20);
+//   list->prepend(30);
+//   list->insertUsingRecursion(2, 100);
+//   list->insertUsingRecursion(3, 200);
+//   list->print();
+//   list->getSize();
 
-  list->append(60);
-  list->append(70);
-  list->print();
-  list->getSize();
+//   list->append(60);
+//   list->append(70);
+//   list->print();
+//   list->getSize();
 
-  list->insertAtIndex(3, 40);
-  list->insertAtIndex(4, 50);
-  list->print();
-  list->getSize();
+//   list->insertAtIndex(3, 40);
+//   list->insertAtIndex(4, 50);
+//   list->print();
+//   list->getSize();
 
-  cout << list->searchByIndex(3) << endl;
-  cout << list->search(40) << endl;
+//   cout << list->searchByIndex(3) << endl;
+//   cout << list->search(40) << endl;
 
-  list->deleteByIndex(0);
-  list->deleteByIndex(5);
-  list->deleteByIndex(2);
-  list->print();
-  list->isEmpty();
-  list->getSize();
+//   list->deleteByIndex(0);
+//   list->deleteByIndex(5);
+//   list->deleteByIndex(2);
+//   list->print();
+//   list->isEmpty();
+//   list->getSize();
 
-  list->reverse();
-  list->print();
+//   list->reverse();
+//   list->print();
 
-  return 0;
-}
+//   return 0;
+// }
