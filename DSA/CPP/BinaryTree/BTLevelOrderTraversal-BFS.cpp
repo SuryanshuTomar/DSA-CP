@@ -1,5 +1,4 @@
-// https : //
-// leetcode.com/problems/binary-tree-level-order-traversal/submissions/
+// https://leetcode.com/problems/binary-tree-level-order-traversal
 
 #include <iostream>
 #include <queue>
