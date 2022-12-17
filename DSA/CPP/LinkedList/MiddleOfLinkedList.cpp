@@ -13,7 +13,7 @@
 
 class Solution {
 public:
-  // Approach 2: Two Pointer (fast and slow)
+  // Approach 2: Two Pointer (fast and slow) or Tortoise-Hare Algorithm
   ListNode *middleNode(ListNode *head) {
     ListNode *fast = head;
     ListNode *slow = head;
