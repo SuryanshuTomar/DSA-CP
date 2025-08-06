@@ -1,4 +1,6 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+
 using namespace std;
 
 void printNestedVector(vector<vector<int>> &result) {
@@ -20,5 +22,3 @@ void printVector(vector<int> &result) {
   }
   cout << " }" << endl;
 }
-
-int main() { return 0; }
