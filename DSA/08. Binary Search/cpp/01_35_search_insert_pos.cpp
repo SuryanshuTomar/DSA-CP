@@ -34,3 +34,7 @@ int main() {
 
   cout << searchInsert(input, target) << endl;
 }
+
+// TC - O(n)
+// SC - O(1)
+// Where n is the size of the input array.

@@ -8,13 +8,11 @@ using namespace std;
 bool isValid(string &str) {
   stack<char> store;
   for (char ch : str) {
-    if (!store.empty() &&
-       ((store.top() == '(' && ch == ')') || 
-        (store.top() == '{' && ch == '}') ||
-        (store.top() == '[' && ch == ']'))){
-          store.pop();
-        }
-    else {
+    if (!store.empty() && ((store.top() == '(' && ch == ')') ||
+                           (store.top() == '{' && ch == '}') ||
+                           (store.top() == '[' && ch == ']'))) {
+      store.pop();
+    } else {
       store.push(ch);
     }
   }
@@ -27,3 +25,7 @@ int main() {
 
   cout << isValid(input) << endl;
 }
+
+// TC - O(n)
+// SC - O(n)
+// where n is the size of the input array.
